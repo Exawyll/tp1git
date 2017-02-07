@@ -17,10 +17,16 @@ public class JdbcConnect {
 	  //Constructeur privé
 	  private JdbcConnect(){
 	    try {
-	      connect = DriverManager.getConnection(url, user, passwd);
+	    	Class.forName("com.mysql.jdbc.Driver");
+            // Setup the connection with the DB
+            connect = DriverManager
+                            .getConnection(url, user, passwd);
 	    } catch (SQLException e) {
 	      e.printStackTrace();
-	    }
+	    } catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	  }
 	   
 	  //Méthode qui va nous retourner notre instance et la créer si elle n'existe pas
