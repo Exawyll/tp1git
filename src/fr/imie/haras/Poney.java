@@ -2,33 +2,25 @@ package fr.imie.haras;
 
 public class Poney {
 
-	private int taille;
-	private int age;
-	
-	/**
-	 * Constructor
-	 */
-	public Poney() {
-		// TODO Auto-generated constructor stub
+	private int id;
+	private String name;
+	private int weight;
+	public int getId() {
+		return id;
 	}
-	
-	/******************************************
-	 * GETTERS & SETTERS
-	 ******************************************/
-
-	public int getTaille() {
-		return taille;
+	public void setId(int id) {
+		this.id = id;
 	}
-
-	public void setTaille(int taille) {
-		this.taille = taille;
+	public String getName() {
+		return name;
 	}
-
-	public int getAge() {
-		return age;
+	public void setName(String name) {
+		this.name = name;
 	}
-
-	public void setAge(int age) {
-		this.age = age;
+	public int getWeight() {
+		return weight;
+	}
+	public void setWeight(int weight) {
+		this.weight = weight;
 	}
 }

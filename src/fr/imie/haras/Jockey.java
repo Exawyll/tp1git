@@ -1,55 +1,34 @@
 package fr.imie.haras;
 
 public class Jockey {
+
+	private int id;
+	private String firstname;
+	private String lastname;
+	private int weight;
 	
-	private String name;
-	private String age;
-	private Poney monCheval;
-	
-	/**
-	 * Constructor
-	 */
-	public Jockey() {
-		// TODO Auto-generated constructor stub
+	public int getId() {
+		return id;
 	}
-	
-	/**
-	 * Custom constructor
-	 * @param name
-	 * @param age
-	 * @param monCheval
-	 */
-	public Jockey(String name, String age, Poney monCheval) {
-		this.name = name;
-		this.age = age;
-		this.monCheval = monCheval;
+	public void setId(int id) {
+		this.id = id;
 	}
-	
-	/*************************************
-	 * GETTERS & SETTERS
-	 *************************************/
-
-	public String getName() {
-		return name;
+	public String getFirstname() {
+		return firstname;
 	}
-
-	public void setName(String name) {
-		this.name = name;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
-
-	public String getAge() {
-		return age;
+	public String getLastname() {
+		return lastname;
 	}
-
-	public void setAge(String age) {
-		this.age = age;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
-
-	public Poney getMonCheval() {
-		return monCheval;
+	public int getWeight() {
+		return weight;
 	}
-
-	public void setMonCheval(Poney monCheval) {
-		this.monCheval = monCheval;
+	public void setWeight(int weight) {
+		this.weight = weight;
 	}
 }
