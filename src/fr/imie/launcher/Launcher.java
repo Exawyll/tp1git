@@ -1,29 +1,27 @@
 package fr.imie.launcher;
 
-import java.sql.DatabaseMetaData;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.Connection;
 
+import fr.imie.haras.Poney;
 import fr.imie.jdbc.JdbcConnect;
 
 public class Launcher {
+	
+	private static Connection myBdd = JdbcConnect.getInstance();
 
 	public static void main(String[] args) {
-		try {
-		      //TEST DE CONNEXION
-		      PreparedStatement prepare = JdbcConnect.getInstance().prepareStatement("SELECT * FROM classe WHERE cls_nom = ?");
-
-		      Statement state = JdbcConnect.getInstance().createStatement();
-
-		      JdbcConnect.getInstance().setAutoCommit(false);
-
-		      DatabaseMetaData meta = JdbcConnect.getInstance().getMetaData();
-		         
-		    } catch (SQLException e) {
-		      e.printStackTrace();
-		    }
-
+		
+		
+		Poney poney1 = new Poney();
+		poney1.setName("Gilbert");
+		poney1.setWeight(95);
+//		poney1.insert();
+		
+		System.out.println("Inserted");
+		
+		poney1.select(8);
 	}
+	
+	
 
 }
